@@ -1,12 +1,12 @@
 import { writeFileSync } from 'node:fs';
 
 const groups = [
-  { title: 'AGENTIC + GENERATIVE AI', label: '01 / ORCHESTRATE', color: '#56e8ff', icon: 'nodes', rows: [['LangChain', 'LangGraph', 'LangSmith'], ['RAG pipelines', 'Tool calling'], ['Multi-agent workflows']] },
-  { title: 'LLM APIs + MODELS', label: '02 / CONNECT', color: '#ce9aff', icon: 'spark', rows: [['OpenAI API', 'Claude', 'Groq API'], ['Gemini', 'Hugging Face', 'Whisper']] },
-  { title: 'LANGUAGES + BACKEND', label: '03 / BUILD', color: '#ff80ce', icon: 'code', rows: [['Python', 'SQL', 'FastAPI'], ['REST APIs', 'Streamlit']] },
-  { title: 'DATABASES + RETRIEVAL', label: '04 / REMEMBER', color: '#56e8ff', icon: 'data', rows: [['PostgreSQL', 'MySQL', 'SQLite'], ['ChromaDB', 'FAISS']] },
-  { title: 'DEVELOPER TOOLBOX', label: '05 / ITERATE', color: '#ce9aff', icon: 'terminal', rows: [['Git', 'GitHub', 'Jupyter'], ['VS Code', 'Codex']] },
-  { title: 'DEPLOYMENT + CLOUD', label: '06 / SHIP', color: '#ff80ce', icon: 'cloud', rows: [['Render', 'Vercel', 'Neon']] },
+  { title: 'AGENTIC + GENERATIVE AI', label: '01 / ORCHESTRATE', color: '#79c0ff', icon: 'nodes', rows: [['LangChain', 'LangGraph', 'LangSmith'], ['RAG pipelines', 'Tool calling'], ['Multi-agent workflows']] },
+  { title: 'LLM APIs + MODELS', label: '02 / CONNECT', color: '#b8a1d9', icon: 'spark', rows: [['OpenAI API', 'Claude', 'Groq API'], ['Gemini', 'Hugging Face', 'Whisper']] },
+  { title: 'LANGUAGES + BACKEND', label: '03 / BUILD', color: '#8fbc8f', icon: 'code', rows: [['Python', 'SQL', 'FastAPI'], ['REST APIs', 'Streamlit']] },
+  { title: 'DATABASES + RETRIEVAL', label: '04 / REMEMBER', color: '#79c0ff', icon: 'data', rows: [['PostgreSQL', 'MySQL', 'SQLite'], ['ChromaDB', 'FAISS']] },
+  { title: 'DEVELOPER TOOLBOX', label: '05 / ITERATE', color: '#b8a1d9', icon: 'terminal', rows: [['Git', 'GitHub', 'Jupyter'], ['VS Code', 'Codex']] },
+  { title: 'DEPLOYMENT + CLOUD', label: '06 / SHIP', color: '#8fbc8f', icon: 'cloud', rows: [['Render', 'Vercel', 'Neon']] },
 ];
 const icons = {
   nodes: '<path d="M10 10L34 10M10 10L22 32M34 10L22 32"/><circle cx="10" cy="10" r="5"/><circle cx="34" cy="10" r="5"/><circle cx="22" cy="32" r="5"/>',
@@ -23,11 +23,11 @@ const cards = groups.map((g,i) => {
     let offset=27;
     row.forEach(text=>{
       const w=text.length*12.1+28;
-      chips+=`<rect x="${offset}" y="${113+r*42}" width="${w}" height="33" rx="7" fill="${g.color}" fill-opacity=".07" stroke="${g.color}" stroke-opacity=".24"/><text x="${offset+14}" y="${136+r*42}" fill="#e3eafb" font-size="20">${text}</text>`;
+      chips+=`<rect x="${offset}" y="${113+r*42}" width="${w}" height="33" rx="7" fill="${g.color}" fill-opacity=".07" stroke="${g.color}" stroke-opacity=".24"/><text x="${offset+14}" y="${136+r*42}" fill="#c9d1d9" font-size="20">${text}</text>`;
       offset+=w+9;
     });
   });
-  return `<g transform="translate(${x} ${y})"><rect width="588" height="248" rx="16" fill="url(#panel)" stroke="${g.color}" stroke-opacity=".38"/><path d="M20 1H140" stroke="${g.color}" stroke-width="2"/><text x="27" y="32" fill="${g.color}" font-size="13" letter-spacing="2">${g.label}</text><text x="27" y="76" fill="#f1f5ff" font-family="Arial,sans-serif" font-size="25" font-weight="700">${g.title}</text><g transform="translate(514 26)" stroke="${g.color}" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">${icons[g.icon]}</g>${chips}<path d="M27 229H562" stroke="${g.color}" stroke-opacity=".12"/></g>`;
+  return `<g transform="translate(${x} ${y})"><rect width="588" height="248" rx="10" fill="url(#panel)" stroke="${g.color}" stroke-opacity=".38"/><path d="M20 1H140" stroke="${g.color}" stroke-width="2"/><text x="27" y="32" fill="${g.color}" font-size="13" letter-spacing="2">${g.label}</text><text x="27" y="76" fill="#e6edf3" font-family="monospace" font-size="24" font-weight="700">${g.title}</text><g transform="translate(514 26)" stroke="${g.color}" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">${icons[g.icon]}</g>${chips}<path d="M27 229H562" stroke="${g.color}" stroke-opacity=".12"/></g>`;
 }).join('');
-writeFileSync('assets/toolkit.svg', `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="786" viewBox="0 0 1200 786" role="img" aria-labelledby="title desc"><title id="title">Eshan's AI engineering toolkit</title><desc id="desc">Six skill groups: agentic AI, LLM APIs, backend development, databases, developer tools, and deployment.</desc><defs><linearGradient id="panel" x2="1" y2="1"><stop stop-color="#111a32"/><stop offset="1" stop-color="#0b1022"/></linearGradient></defs><g font-family="monospace">${cards}</g></svg>`);
+writeFileSync('assets/toolkit.svg', `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="786" viewBox="0 0 1200 786" role="img" aria-labelledby="title desc"><title id="title">Eshan's AI engineering toolkit</title><desc id="desc">Six skill groups: agentic AI, LLM APIs, backend development, databases, developer tools, and deployment.</desc><defs><linearGradient id="panel" x2="1" y2="1"><stop stop-color="#161b22"/><stop offset="1" stop-color="#161b22"/></linearGradient></defs><g font-family="monospace">${cards}</g></svg>`);
 console.log('Built six resume-based toolkit cards.');
