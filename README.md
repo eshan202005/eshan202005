@@ -41,7 +41,9 @@ I'm **Eshan Ashwani Gupta**. I build with Python and explore how language models
 
 ### `03 / TOOLKIT`
 
-<img src="assets/toolkit.svg" width="100%" alt="Languages: Python and JavaScript. AI: LangChain, LangGraph, OpenAI, ChromaDB. Apps and data: FastAPI, Streamlit, React, PostgreSQL." />
+<img src="assets/toolkit.svg" width="100%" alt="AI: LangChain, LangGraph, LangSmith, RAG, tool calling, multi-agent workflows. Models and APIs: OpenAI, Claude, Groq, Gemini, Hugging Face, Whisper. Backend: Python, SQL, FastAPI, REST APIs, Streamlit. Databases: PostgreSQL, MySQL, SQLite, ChromaDB, FAISS. Tools: Git, GitHub, Jupyter, VS Code, Codex. Deployment: Render, Vercel, Neon." />
+
+**CS foundations:** Data Structures & Algorithms · Object-Oriented Programming · DBMS · Operating Systems · Computer Networks
 
 ### `04 / LEARNING IN PUBLIC`
 
