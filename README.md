@@ -2,28 +2,15 @@
   <img src="assets/neon-city.jpg" width="100%" alt="Eshan Gupta — AI engineering and agentic systems. A developer overlooking a cyan and magenta neon city." />
 </p>
 
-<h1 align="center">Hey, I'm Eshan 👋</h1>
-
-<p align="center">
-  Building AI tools that turn ideas into working systems.<br />
-  <b>Agents · RAG · Python · Full-stack AI</b>
+<p>
+  <img src="assets/intro.svg" width="100%" alt="About Eshan: I connect language models, tools, and data to build useful AI applications. Current build: Ryujin AI, with agent orchestration, shared retrieval, and persistent memory." />
 </p>
 
 <p align="center">
-  <a href="https://github.com/eshan202005?tab=repositories">Explore my repos ↗</a>
-  &nbsp; / &nbsp;
-  <a href="https://github.com/eshan202005/Ryujin-AI">Meet Ryujin AI ↗</a>
+  <a href="https://github.com/eshan202005?tab=repositories"><img src="assets/button-projects.svg" width="210" alt="Explore my repositories" /></a>
+  &nbsp;
+  <a href="https://github.com/eshan202005/Ryujin-AI"><img src="assets/button-ryujin.svg" width="210" alt="Discover Ryujin AI" /></a>
 </p>
-
----
-
-### `01 / ABOUT THE BUILDER`
-
-I'm **Eshan Ashwani Gupta**. I build with Python and explore how language models, retrieval, and agent workflows fit together in useful applications.
-
-- **Building:** Ryujin AI — an AI workspace with agent orchestration, shared retrieval, and persistent memory.
-- **Exploring:** LangGraph, tool use, and the architecture behind agentic systems.
-- **Also making:** document research tools and AI-powered interview practice.
 
 ### `02 / FEATURED BUILDS`
 
