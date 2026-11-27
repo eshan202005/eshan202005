@@ -1,12 +1,13 @@
-import {writeFileSync} from 'node:fs';
+import {readFileSync,writeFileSync} from 'node:fs';
 const colors=['#79c0ff','#b8a1d9','#8fbc8f'];
 const wrap=(w,h,body)=>`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><rect x="1" y="1" width="${w-2}" height="${h-2}" rx="10" fill="#161b22" stroke="#30363d"/><g font-family="monospace">${body}</g></svg>`;
 const text=(x,y,value,color='#c9d1d9',size=20,extra='')=>`<text x="${x}" y="${y}" fill="${color}" font-size="${size}" ${extra}>${value.replaceAll('&','&amp;')}</text>`;
 let hero='<path d="M1 48H1199" stroke="#30363d"/>';
 ['#895452','#927f52','#56856b'].forEach((c,i)=>{hero+=`<circle cx="${26+i*20}" cy="25" r="5" fill="${c}"/>`;});
 hero+=text(600,31,'eshan@github: ~ / profile','#8b949e',16,'text-anchor="middle"');
-['EEEEEEE   GGGGG ','EE       GG   GG','EE       GG     ','EEEEEE   GG GGGG','EE       GG   GG','EE       GG   GG','EEEEEEE   GGGGG '].forEach((line,i)=>{hero+=text(43,139+i*31,line,i<3?colors[0]:colors[1],25,'xml:space="preserve" font-weight="700"');});
-hero+=text(43,390,'BUILD / LEARN / ITERATE','#8b949e',15)+'<path d="M352 82V410" stroke="#30363d"/>';
+const portrait=JSON.parse(readFileSync(new URL('../assets/portrait-ascii.json',import.meta.url),'utf8'));
+portrait.forEach((line,i)=>{hero+=text(24,78+i*5.65,line,'#a8b8ca',5.8,'xml:space="preserve"');});
+hero+='<path d="M352 76V424" stroke="#30363d"/>';
 hero+=text(392,104,'Eshan Ashwani Gupta','#e6edf3',30,'font-weight="700"')+text(392,136,'eshan202005@github','#8b949e',17)+'<path d="M392 155H1158" stroke="#30363d"/>';
 [['Role','GenAI & Agentic AI Developer'],['Education','B.Tech / Electronics / 2027'],['Building','Ryujin AI'],['Focus','Multi-agent systems / RAG'],['Backend','Python / FastAPI / SQL'],['Exploring','LangGraph / tool calling']].forEach(([k,v],i)=>{hero+=text(392,190+i*35,k,'#d2a86a')+text(538,190+i*35,v,colors[0]);});
 hero+=text(43,456,'$','#8fbc8f',17)+text(66,456,'turn ideas into working systems','#c9d1d9',17);
