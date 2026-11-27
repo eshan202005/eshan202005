@@ -12,7 +12,7 @@ hero+=text(392,104,'Eshan Ashwani Gupta','#e6edf3',30,'font-weight="700"')+text(
 [['Role','GenAI & Agentic AI Developer'],['Education','B.Tech / Electronics / 2027'],['Building','Ryujin AI'],['Focus','Multi-agent systems / RAG'],['Backend','Python / FastAPI / SQL'],['Exploring','LangGraph / tool calling']].forEach(([k,v],i)=>{hero+=text(392,190+i*35,k,'#d2a86a')+text(538,190+i*35,v,colors[0]);});
 hero+=text(43,456,'$','#8fbc8f',17)+text(66,456,'turn ideas into working systems','#c9d1d9',17);
 ['#30363d','#8b949e',...colors,'#d2a86a'].forEach((c,i)=>{hero+=`<rect x="${951+i*34}" y="438" width="30" height="21" fill="${c}"/>`;});
-writeFileSync('assets/terminal.svg',wrap(1200,488,hero));
+writeFileSync('assets/terminal-portrait.svg',wrap(1200,488,hero));
 const projects=[['ryujin','ryujin-ai','MULTI-AGENT WORKSPACE',['Specialized agents, shared','retrieval, persistent memory.'],'Python / LangGraph / FastAPI'],['research','research-assistant','DOCUMENT INTELLIGENCE',['Multi-PDF retrieval and','questions across documents.'],'LangChain / ChromaDB'],['interviewer','mock-interviewer','AI INTERVIEW PRACTICE',['Resume-based questions,','voice answers, feedback.'],'Python / FastAPI / React']];
 projects.forEach(([file,name,label,lines,stack],i)=>{let body=text(26,38,`repo / 0${i+1}`,'#8b949e',15)+text(552,38,'↗',colors[i],22,'text-anchor="end"')+'<path d="M26 56H552" stroke="#30363d"/>'+text(26,105,name,'#e6edf3',29,'font-weight="700"')+text(26,139,label,colors[i],14,'letter-spacing="1.5"'); lines.forEach((s,j)=>{body+=text(26,184+j*28,s,'#aeb9c7',21);});body+=text(26,265,stack,'#8b949e',17);writeFileSync(`assets/${file}.svg`,wrap(580,298,body));});
 await import('./build-toolkit.mjs');

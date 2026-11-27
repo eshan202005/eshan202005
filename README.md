@@ -1,5 +1,5 @@
 <p>
-  <img src="assets/terminal.svg" width="100%" alt="Eshan Ashwani Gupta, GenAI and Agentic AI Developer. B.Tech in Electronics, 2027. Building Ryujin AI with Python, FastAPI, LangGraph, multi-agent systems, and RAG." />
+  <img src="assets/terminal-portrait.svg" width="100%" alt="Eshan Ashwani Gupta, GenAI and Agentic AI Developer. B.Tech in Electronics, 2027. Building Ryujin AI with Python, FastAPI, LangGraph, multi-agent systems, and RAG." />
 </p>
 
 I build AI applications that connect language models, tools, and data — from document research to stateful agent workflows.
